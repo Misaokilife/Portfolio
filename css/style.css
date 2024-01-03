@@ -157,30 +157,34 @@ img {
   height: auto;
 }
 
-/* フラッシュアニメーションの定義 */
-@keyframes flash {
-  0%, 100% { opacity: 1;} /* 通常状態 */
-  50% { opacity: 0.6; background-color: #17b1e6; }
+/* 回転アニメーション */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .button-container {
   position: absolute; /* 絶対位置指定 */
-  top: 60%;
-  left: 55%;
+  top: 21%;
+  left: 38%;
   transform: translate(-50%, -50%);/* コンテナをその中心から左上に50%ずつ移動する */
   z-index: 10;/* 画像より上に表示する */
 }
 
 .scroll-btn {
   display: flex; /* Flexbox を使用して中央揃えを行う */
-  width: 90px;
-  height: 90px;
+  width: 180px;
+  height: 180px;
   line-height: 1.2;/* 複数行のテキストのために行間を調整 */
   border-radius: 50%;
-  background-color: #1ca9e3;
+  background-color: rgba(28, 169, 227, 0.5); /* 背景色を透明度の高いものに設定 */;
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   transition: background-color 0.3s;
@@ -189,13 +193,21 @@ img {
   align-items: center; /* 垂直方向の中央揃え */
   justify-content: center;/* 水平方向の中央揃え */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  animation: flash 3s infinite;/* 2秒間隔で無限にアニメーションを適用 */
+  animation: flash 3s infinite, rotate 6s infinite;/* 2秒間隔で無限に点滅、6秒間で無限に回転を適用 */
 }
 
 .scroll-btn:hover {
   background-color: #0c7abf;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   animation: none;
+}
+
+@media only screen and (max-width: 414px) {
+  .scroll-btn {
+    width: 75px;
+    height: 75px;
+    font-size: 8px;
+  }
 }
 
 /*--------------------------------
