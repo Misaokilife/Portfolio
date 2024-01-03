@@ -44,6 +44,9 @@
       <div class="mv">
         <div class="mv-container">
           <img src="img/main.png" alt="MISAOKI WORKS ポートフォリオのメインビジュアル">
+            <div class="button-container">
+              <a href="#works" class="scroll-btn">View my works</a>
+            </div>
         </div>
       </div>
       <!-- /mv -->
@@ -227,5 +230,15 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type='text/javascript' src="js/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const scrollBtn = document.querySelector('.scroll-btn');
+      scrollBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.getElementById(this.getAttribute('href').substring(1));
+        target.scrollIntoView({behavior: "smooth"});
+      });
+    });
+  </script>  
 </body>
 </html>
