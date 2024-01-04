@@ -11,6 +11,11 @@ a {
   color: #1ca9e3;
 }
 
+a:focus, button:focus {
+  outline: 3px solid #51a7f9 !important;
+  background-color: rgba(255, 255, 0, 0.3); /* フォーカス時に背景色を変更して強調 */
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -155,6 +160,7 @@ img {
 .mv-container img {
   width: 100%;
   height: auto;
+  border-radius: 20px;
 }
 
 /* 回転アニメーション */
@@ -219,25 +225,41 @@ img {
 /*--------------------------------
  Works
 ---------------------------------*/
+#works {
+  background-color: rgba(211, 184, 140, 0.2);/*あなたが選んだベースカラーのベージュのカラーコード;*/
+  padding: 60px 0;
+}
+
 .works {
   margin-top: 30px;
 }
 
 .works-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
+  margin: 20px;
+  padding: 20px;
   color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
-.works-item:hover {
+/* アクセシビリティ向上のためのスタイル */
+.works-item:focus-within,
+a:focus,
+button:focus {
+  outline: 3px solid #51a7f9; /* フォーカス時の明確なアウトライン */
+  outline-offset: 3px; /* アウトラインのオフセット */
+}
+
+.works-item:hover, a:hover, button:hover {
   opacity: .9;
+  background-color: rgba(136, 176, 142, 0.3); /* 指定された背景色に変更 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .works-item:nth-of-type(3n) {
@@ -245,18 +267,19 @@ img {
 }
 
 .works-img img {
-  box-shadow: #797979;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
 }
 
 .works-name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 8px;
 }
 
 .works-info {
-  font-size: 10px;
-  margin-top: 5px;
+  font-size: 14px;
 }
 
 /*--------------------------------
@@ -299,6 +322,10 @@ img {
 /*--------------------------------
  About
 ---------------------------------*/
+#about {
+  background-color: rgba(211, 184, 140, 0.2);
+}
+
 .profile {
   display: flex;
   flex-wrap: wrap;
@@ -315,6 +342,7 @@ img {
 }
 .profile-body {
   flex: 1;
+  align-self: center; /* テキストブロックをFlexコンテナの中央に配置 */
 }
 
 .profile-body p {
@@ -324,6 +352,10 @@ img {
 
 .profile-body p:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.profile-img, .profile-body {
+  align-self: center; /* 画像とテキストブロックをそれぞれ中央に配置 */
 }
 
 /*--------------------------------
