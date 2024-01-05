@@ -1,5 +1,15 @@
-body {
+/* 英語用のスタイル */
+:lang(en) {
   font-family: 'Nunito', sans-serif;
+}
+
+/* 日本語用のスタイル */
+:lang(ja) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Nunito', 'Noto Sans JP', sans-serif;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
@@ -104,6 +114,7 @@ img {
 
 .header-logo a {
   color: #333;
+  font-weight: 800;
 }
 
 .gnav-list {
@@ -119,7 +130,7 @@ img {
 .gnav-item a {
   position: relative;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
   display: inline-block;
   padding: 5px 0;
   transition: .3s;
@@ -267,8 +278,7 @@ button:focus {
 
 .works-name {
   font-size: 14px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   margin-top: 8px;
 }
 
