@@ -1,5 +1,6 @@
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
   color: #333;
@@ -58,13 +59,14 @@ img {
  見出し
 ---------------------------------*/
 .title {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 600;
   line-height: 1;
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: .05em;
   color: #333;
+
 }
 
 .lead {
@@ -93,8 +95,8 @@ img {
 }
 
 .header-logo {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 600;
   line-height: 1.2;
   margin-right: 20px;
   letter-spacing: .05em;
@@ -116,8 +118,8 @@ img {
 
 .gnav-item a {
   position: relative;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   display: inline-block;
   padding: 5px 0;
   transition: .3s;
@@ -197,7 +199,7 @@ img {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* テキストシャドウを追加 */
   text-decoration: none;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   transition: background-color 0.3s;
   white-space: normal;/* テキストの折り返しを許可 */
@@ -212,14 +214,6 @@ img {
   background-color: #0c7abf;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
   animation: none;
-}
-
-@media only screen and (max-width: 414px) {
-  .scroll-btn {
-    width: 75px;
-    height: 75px;
-    font-size: 8px;
-  }
 }
 
 /*--------------------------------
@@ -274,7 +268,8 @@ button:focus {
 
 .works-name {
   font-size: 14px;
-  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
   margin-top: 8px;
 }
 
@@ -345,6 +340,11 @@ button:focus {
   align-self: center; /* テキストブロックをFlexコンテナの中央に配置 */
 }
 
+.profile-body h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 .profile-body p {
   font-size: 15px;
   line-height: 1.8;
@@ -357,6 +357,7 @@ button:focus {
 .profile-img, .profile-body {
   align-self: center; /* 画像とテキストブロックをそれぞれ中央に配置 */
 }
+
 
 /*--------------------------------
  Contact
@@ -546,6 +547,14 @@ button:focus {
     top: 75%;
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  @media only screen and (max-width: 414px) {
+    .scroll-btn {
+      width: 75px;
+      height: 75px;
+      font-size: 8px;
+    }
   }
 
   /* Works */
