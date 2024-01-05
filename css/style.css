@@ -175,9 +175,14 @@ img {
   }
 }
 
+/* 点滅アニメーション */
 @keyframes flash {
-  0%, 100% { opacity: 0; } /* 開始と終了は完全に透明 */
-  50% { opacity: 0.5; } /* 中間は半透明 */
+  0%, 57.14% { /* 0% から 57.14% は約4秒間、全体の7秒の内 */
+    background-color: #88b08e; /* 通常の色 */
+  }
+  57.14%, 100% { /* 57.14% から 100% は残りの約3秒間 */
+    background-color: rgba(0, 123, 142, 0.5); /* 半透明の色 */
+  }
 }
 
 .button-container {
@@ -185,35 +190,29 @@ img {
   top: 21%;
   left: 38%;
   transform: translate(-50%, -50%);/* コンテナをその中心から左上に50%ずつ移動する */
-  z-index: 10;/* 画像より上に表示する */
 }
 
 .scroll-btn {
   display: flex; /* Flexbox を使用して中央揃えを行う */
-  width: 192px;
-  height: 192px;
-  line-height: 1.2;/* 複数行のテキストのために行間を調整 */
-  border-radius: 50%;
-  background-color: rgba(28, 169, 227, 0.9); /* 背景色を透明度の高いものに設定 */;
+  padding: 10px 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #88b08e;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* テキストシャドウを追加 */
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   text-align: center;
-  transition: background-color 0.3s;
-  white-space: normal;/* テキストの折り返しを許可 */
   overflow: hidden;/* 内容がはみ出た場合に非表示にする */
   align-items: center; /* 垂直方向の中央揃え */
   justify-content: center;/* 水平方向の中央揃え */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  animation: flash 3s infinite, rotate 6s infinite;/* 2秒間隔で無限に点滅、6秒間で無限に回転を適用 */
+  animation: rotate 12s infinite linear, flash 7s infinite linear; /* 2つのアニメーションをカンマで区切る */
 }
 
 .scroll-btn:hover {
-  background-color: #0c7abf;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-  animation: none;
+  background-color: blue;
 }
 
 /*--------------------------------
