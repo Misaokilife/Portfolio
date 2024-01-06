@@ -339,48 +339,65 @@ button:focus {
   margin: 0 auto;
 }
 .profile-img {
-  width: 20%;
+  width: 25%;
   margin-right: 30px;
   border-radius: 50%;
+  text-align: center;
+  margin-bottom: 30px;
+
 }
 .profile-img img {
   border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
+
+.profile-img h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-img p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
 .profile-body {
   flex: 1;
   align-self: center; /* テキストブロックをFlexコンテナの中央に配置 */
-}
-
-.profile-body h3 {
-  color: #333;
-  font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .profile-body p {
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.6;
   max-width: 600px;
   text-align: justify; /* テキストを両端揃えにする場合 */
+  margin-bottom: 20px;
 }
 
 .profile-body p:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* 最後のパラグラフは下マージンを0にする場合 */
+.profile-body p:last-child {
+  margin-bottom: 0;
 }
 
 .profile-img, .profile-body {
   align-self: center; /* 画像とテキストブロックをそれぞれ中央に配置 */
 }
 
-.about-text p {
-  margin-bottom: 10px;
-}
 
 /*--------------------------------
  Contact
 ---------------------------------*/
 .contact {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .contact-item:not(:last-child) {
@@ -389,6 +406,19 @@ button:focus {
 
 .contact-text {
   margin-top: 10px;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact p {
+  margin: 0;
+  text-align: center;
 }
 /*--------------------------------
  ページトップ
