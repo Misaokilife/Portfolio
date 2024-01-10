@@ -201,6 +201,9 @@ img {
   top: 21%;
   left: 38%;
   transform: translate(-50%, -50%);/* コンテナをその中心から左上に50%ずつ移動する */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .scroll-btn {
@@ -222,15 +225,76 @@ img {
   animation: rotate 12s infinite linear, flash 7s infinite linear; /* 2つのアニメーションをカンマで区切る */
 }
 
-.scroll-btn:hover {
-  background-color: blue;
+.new-buttons {
+  position: absolute;
+  top: 0; /* mv-containerの上端に配置 */
+  left: 50%;  /* 中央揃えのために左端から50%の位置に設定 */
+  transform: translateX(-50%);  /* X軸方向に-50%移動して中央揃えに */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* コンテナの幅を設定 */
+  min-height: 130px;
+  z-index: 100; /*要素を前面に持ってくる */
+}
+
+.new-btn {
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.2s;
+  font-size: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+
+.button-1 {
+  position: absolute;
+  top: 32%;
+  left: 51%;
+  transform: translateX(-50%);
+  width: 25%;
+  height: 50px;
+  font-size: 16px;
+}
+
+.button-2 {
+  position: absolute;
+  bottom: 27%;
+  left: 42%;
+  height: 33px;
+  font-size: 12px;
+}
+
+/* マウスオーバー時のスタイル */
+.new-btn:hover {
+  background: red;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* テキスト切り替え用スタイル */
+.new-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.new-btn:hover span:nth-child(1) {
+  opacity: 0;
+}
+
+.new-btn:hover span:nth-child(2) {
+  opacity: 1;
 }
 
 /*--------------------------------
  Works
 ---------------------------------*/
 #works {
-  background-color: rgba(211, 184, 140, 0.2);/*あなたが選んだベースカラーのベージュのカラーコード;*/
+  background-color: rgba(211, 184, 140, 0.2);/*ベースカラーのベージュのカラーコード;*/
   padding: 60px 0;
 }
 
