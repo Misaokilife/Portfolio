@@ -221,6 +221,7 @@ img {
   overflow: hidden;/* 内容がはみ出た場合に非表示にする */
   align-items: center; /* 垂直方向の中央揃え */
   justify-content: center;/* 水平方向の中央揃え */
+  border-radius:25px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   animation: rotate 12s infinite linear, flash 7s infinite linear; /* 2つのアニメーションをカンマで区切る */
 }
@@ -238,36 +239,48 @@ img {
   z-index: 100; /*要素を前面に持ってくる */
 }
 
-.new-btn {
-  border: none;
-  border-radius: 5%;
-  cursor: pointer;
-  z-index: 100;
-  transition: all 0.2s;
-  font-size: 16px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: white;
-  font-weight: 600;
-}
-
-
 .button-1 {
   position: absolute;
   top: 32%;
   left: 51%;
   transform: translateX(-50%);
-  width: 25%;
-  height: 50px;
+  width: 27%;
+  height: 75px;
   font-size: 16px;
+  padding: 10px;
+}
+
+.btn-text {
+  color: red;
+  font-size: 24px;
 }
 
 .button-2 {
   position: absolute;
   bottom: 27%;
-  left: 42%;
-  height: 33px;
+  left: 40%;
+  width: 12%;
+  height: 40px;
   font-size: 12px;
+  padding: 10px;
+}
+
+
+.new-btn {
+  border: none;
+  border-radius:25px;
+  border: solid 0.5px #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.2s;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+	white-space: nowrap;
 }
 
 /* マウスオーバー時のスタイル */
@@ -277,18 +290,27 @@ img {
   font-weight: 600;
 }
 
-/* テキスト切り替え用スタイル */
+.new-btn span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  transition: opacity 0.5s ease;
+}
+
 .new-btn span:nth-child(2) {
-  opacity: 0;
+  opacity: 0; /* 最初は非表示に */
 }
 
 .new-btn:hover span:nth-child(1) {
-  opacity: 0;
+  opacity: 0; /* ホバー時に非表示に */
 }
 
 .new-btn:hover span:nth-child(2) {
-  opacity: 1;
+  opacity: 1; /* ホバー時に表示 */
 }
+
+
 
 /*--------------------------------
  Works
@@ -453,7 +475,20 @@ button:focus {
   align-self: center; /* 画像とテキストブロックをそれぞれ中央に配置 */
 }
 
+.TextTyping span {
+	display: none;
+}
 
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+  content: "|";
+	animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime{
+	from{opacity:0}
+	to{opacity:1}
+}
 /*--------------------------------
  Contact
 ---------------------------------*/
