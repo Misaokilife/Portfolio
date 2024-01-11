@@ -706,6 +706,49 @@ button:focus {
     }
   }
 
+  @media only screen and (max-width: 768px) {
+    .button-1 {
+      position: absolute;
+      top: 10%; /* モバイル画面サイズに合わせて位置を調整 */
+      left: 50%; /* 中央揃えのために左端から50%の位置に設定 */
+      transform: translateX(-50%); /* X軸方向に-50%移動して中央揃えに */
+      width: 27%; /* 幅をそのまま27%に保持 */
+      height: auto; /* 高さを自動調整 */
+    }
+  
+    .button-2 {
+      position: absolute;
+      bottom: 10%; /* モバイル画面サイズに合わせて位置を調整 */
+      left: 50%; /* 中央揃えのために左端から50%の位置に設定 */
+      transform: translateX(-50%); /* X軸方向に-50%移動して中央揃えに */
+      width: 80%; /* モバイル画面サイズに合わせて幅を調整 */
+      height: auto; /* 高さを自動調整 */
+    }
+  }
+  
+  @media only screen and (max-width: 414px) {
+    .button-1 {
+      top: 35%; 
+      height: 30px;
+    }
+  
+    .button-2 {
+      width: 11%;
+      bottom: 25%; 
+      left: 46%;
+    }
+  }
+
+  .new-btn {
+    font-size: 8px;
+  }
+
+  .btn-text {
+    font-size: 12px;
+  }
+  
+  
+
   /* Works */
   .works-name {
     font-size: 12px;
@@ -793,5 +836,6 @@ button:focus {
     margin-bottom: 20px;
   }
 }
+
 
 
