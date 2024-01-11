@@ -355,13 +355,9 @@ button:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.works-item:nth-of-type(3n) {
-  margin-right: 0;
-}
-
 .works-img img {
   width: 100%;
-  height: auto;
+  object-fit: contain;
   box-shadow: none;
 }
 
