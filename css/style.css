@@ -1,3 +1,12 @@
+@charset "utf-8";
+
+html, *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-size:16px;
+}
+
 /* 英語用のスタイル */
 :lang(en) {
   font-family: 'Nunito', sans-serif;
@@ -13,7 +22,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
-  color: #4c4c4c;
+  color: #555555;
 }
 
 a {
@@ -110,8 +119,9 @@ img {
 }
 
 .header-logo a {
-  color: #4c4c4c;
+  font-size: 24px;
   font-weight: 800;
+  color: #555555;
 }
 
 .gnav-list {
@@ -126,13 +136,13 @@ img {
 
 .gnav-item a {
   position: relative;
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 600;
   display: inline-block;
   padding: 5px 0;
   transition: .3s;
   letter-spacing: .05em;
-  color: #4c4c4c;
+  color: #555555;
 }
 .gnav-item a:after {
   position: absolute;
